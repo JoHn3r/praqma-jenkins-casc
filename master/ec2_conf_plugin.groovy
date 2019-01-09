@@ -19,7 +19,7 @@ def SlaveTemplateUsEast1Parameters = [
   connectUsingPublicIp:     false,
   customDeviceMapping:      '',
   deleteRootOnTermination:  true,
-  description:              'Jenkins slave EC2 US East 1',
+  description:              'Jenkins slave EC2 Eu West 1',
   ebsOptimized:             false,
   iamInstanceProfile:       '',
   idleTerminationMinutes:   '5',
@@ -29,53 +29,27 @@ def SlaveTemplateUsEast1Parameters = [
   labelString:              'aws.ec2.us.east.jenkins.slave',
   launchTimeoutStr:         '',
   numExecutors:             '1',
-  remoteAdmin:              'centos',
+  remoteAdmin:              '',
   remoteFS:                 '',
-  securityGroups:           'sg-11111111',
+  securityGroups:           'sg-030c9d6c3d6431799',
   stopOnTerminate:          false,
-  subnetId:                 'subnet-SSSSSSSS',
-  tags:                     new EC2Tag('Name', 'jenkins-slave'),
+  subnetId:                 'subnet-0354c7e43ef868d03',
+  tags:                     new EC2Tag('Name', 'jenkins-ec2-linux'),
   tmpDir:                   '',
   type:                     't2.medium',
   useDedicatedTenancy:      false,
   useEphemeralDevices:      true,
   usePrivateDnsName:        true,
   userData:                 '',
-  zone:                     'us-east-1a,us-east-1b'
+  zone:                     'eu-west-1a,eu-west-1b'
 ]
  
 def AmazonEC2CloudParameters = [
-  cloudName:      'MyCompany',
-  credentialsId:  'jenkins-aws-key',
+  cloudName:      'jenkins-ec2-windows',
+  credentialsId:  'central-shared-ci',
   instanceCapStr: '2',
-  privateKey:     '''-----BEGIN RSA PRIVATE KEY-----
-MIIEogIBAAKCAQEAkjaolzS/3wlfDfQkaXyuBQ5VaodY9/0tm8BUdcfGmv7MQLUg
-G12MNC5MLcR0Oj4NIOJZEZvH3afPmk5UZ1hZWRWupokSXDM3alNFoWzt0SKDTsig
-nHrqouojRbTqZG8dlmAOHom3mTzj3OFG7PyLdsAEOcrVXwnqgBn7mDriXz+dLkFY
-QctsJHXpm3XBNVaZ/Rmx7vAwFSg3XO0DkjRjR2mXadyh4yQX/bMqr1VEAYBBjGtZ
-ri9OXAnoBMduNndeRTQ6i4xA2mBW7zcg4qksHUd+0jKN5t8cVxqOSOcCCztgwaXh
-xEa9/SMIS+FR6NOrUQ+w0MxWsspHogWNWif9IQIDAQABAoIBAGLt9r5wY46OsbEo
-SubRBJHJNAQjVhBdTtm+lacnp/rBggQaSYIalr3LwaGJ9jZeO9XPMQLYC7CvVamL
-bFKMlc/P+t8VicW2pb0cYNWrdXH2zy+kUf/urwnSMFF+6sVP5Y4UqhkBh6d4apjO
-GIZLDjYoD/PmiN6IQBGzAufql7ZntgUohYYkHM/ovskZSR6fSKXn91sirlmisfhE
-/74kGfJF2+S/+HYtpcCgYkSYs/c0Ibzw8wEnNaCK+I0zn4Ppp53ip3hOiI3+0EVY
-qnNisqL5yj8wjj1QFfwkVyWCtr7p0U4A4aDza35rxDKpZW/PcZNRK5pbLQzriqo5
-J9DOQJ0CgYEA2HGwf+GjRMoJCcONjHKP8NJ3KoSBFj0ujJAxhIOyxJveMMS5agCH
-94yNReZEppV7C/1fpcPb9GL38tfAb6VdGHOlFmq7djgkCKH+F7/PvDJ+u+1G871K
-YtvEFlHT6IPUouEfSj+7/eRxZwNEuKkM2x4dOqPXbvKU63HJkxRFdz8CgYEArO89
-WARI2+o82V3ldPEZAIfri+4HD0nYW7UY4hbExdyuYTKL619Wt1nr91ubCnpR5/1s
-xfesBGYHlqsAuHi4tXCaU9aDyK9j+MnWUkDMvG5RXWzLDmrrfmFlohHc6r7HuVuR
-gtVayj8izcZpXew6Vo3ENRdvfxCzT2V7OPnG058CgYAOb465CMCN7vepWgyPyHhH
-NJJUGKBPbmczYs6aqvn6WPb5w7UmF8D5xrsJZXFAtwmM5CpD8QszgoJNBQzFpX7P
-Ca+CDj5QhTAKD1vWE6n0QF3phMrNqNtUOpoabvy2Lky5TFB88EFGjrzthO9JbaT4
-3EpQxeqxcKZ0CZPLJnf3mwKBgFu46IhufVZm/q8rpjBIUEJ/1Ob68LOjLyY0/2Wr
-PeLUEYlsDdphTtUg1I71/12nUxoAyFiX7JzIoO3A9TjijtVtS+17sZoXrKagJxSp
-We33dSBgO7MB8rWtYwJ7BvlbBwPBFYSXNPhgVE1gFzLBwI930cF3FKQIb5KE+L5X
-fKVxAoGAcvNM9HpgtR3ngP7xWkeOWVkV6NDc2GbuYptbAMM7lY2DzG2Dbq1ru6iJ
-n5CNoNomPrHA05Zx2e+DbmrDbJVowSlX5xJKbc3ttYsBZlqYdZmWllpG1np8snwd
-I2vmggm6Uubt0s433SbMwgXonolPH0N7s8VdzVf0/moMUujYcE0=
------END RSA PRIVATE KEY-----''',
-  region: 'us-east-1',
+  privateKey:     '''''',
+  region: 'eu-west-1',
   useInstanceProfileForCredentials: false
 ]
  

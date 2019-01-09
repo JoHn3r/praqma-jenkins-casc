@@ -9,9 +9,9 @@ services:
       - 8080:8080
       - 50000:5000
     volumes:
-    - C:/Users/eric.travers.POLIRIS/Documents/projects/praqma-jenkins-casc/jenkins_home:/var/jenkins_home
+    #- C:/Users/eric.travers.POLIRIS/Documents/projects/praqma-jenkins-casc/jenkins_home:/var/jenkins_home
     - C:/Users/eric.travers.POLIRIS/Documents/projects/praqma-jenkins-casc/jenkins_conf:/var/jenkins_conf
     environment:
     - CASC_JENKINS_CONFIG=/var/jenkins_conf/jenkins.yaml
 volumes:
-  jenkins_home:
+  jenkins_conf:
