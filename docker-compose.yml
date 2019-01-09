@@ -1,5 +1,4 @@
 version: '3.3'
-
 services:
   jenkins:
     build:
@@ -10,17 +9,9 @@ services:
       - 8080:8080
       - 50000:5000
     volumes:
-      - jenkins_home:/var/jenkins_home
-#      - /Users/ewelinawilkosz/praqma/bd_repos/jenkinsci/praqma-jenkins-casc:/var/jenkins_conf
-#    secrets:
-#      - github
-#      - adminpw
-#    environment:
-#      - CASC_JENKINS_CONFIG=/var/jenkins_conf/jenkins.yaml
-#secrets:
-#  github:
-#    file: /Users/ewelinawilkosz/praqma/bd_repos/jenkinsci/praqma-jenkins-casc/secrets/github
-#  adminpw:
-#    file: /Users/ewelinawilkosz/praqma/bd_repos/jenkinsci/praqma-jenkins-casc/secrets/adminpw
+    - C:/Users/eric.travers.POLIRIS/Documents/projects/praqma-jenkins-casc/jenkins_home:/var/jenkins_home
+    - C:/Users/eric.travers.POLIRIS/Documents/projects/praqma-jenkins-casc/jenkins_conf:/var/jenkins_conf
+    environment:
+    - CASC_JENKINS_CONFIG=/var/jenkins_conf/jenkins.yaml
 volumes:
   jenkins_home:

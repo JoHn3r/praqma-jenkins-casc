@@ -1,11 +1,11 @@
-#plugins:
-#  required:
-#    git: 3.9.0
-#    warnings: 4.67
-#    ec2: 1.41
+# plugins:
+#   required:
+#     git: latest
+#     warnings: latest
+#     scalable-amazon-ecs: latest
 jenkins:
 #  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
-  systemMessage: "Hello Day of Jenkins.\n\n"
+  systemMessage: "Welcome to the new world !\n\n"
   numExecutors: 1
   mode: NORMAL
   scmCheckoutRetryCount: 3
@@ -16,6 +16,6 @@ jenkins:
       allowsSignup: false
       users:
         - id: demoAdmin
-          password: ${adminpw}
+          password: toto
   
   
