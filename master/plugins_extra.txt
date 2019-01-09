@@ -3,3 +3,4 @@ configuration-as-code-support
 git
 warnings
 scalable-amazon-ecs
+ec2
